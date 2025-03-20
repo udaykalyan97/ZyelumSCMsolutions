@@ -31,3 +31,13 @@ export const login = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+export const logout = async (req, res) => {
+    try {
+      res.cookie("token", "", { httpOnly: true, expires: new Date(0) }); // Expire the cookie
+      res.status(200).json({ message: "Logout successful" });
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  };
+  
