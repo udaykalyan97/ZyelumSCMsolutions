@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-// import { categories } from "../Utils/Categories.js";
+import { categories } from "../Utils/Categories.js";
 import axios from "axios";
 
 const MainContentCategories = () => {
-  const [categories, setCategories] = useState([]);
+  // const [categories, setCategories] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("/api/categories")
-      .then((response) => setCategories(response.data))
-      .catch((error) => console.error("Error fetching categories:", error));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("/api/categories")
+  //     .then((response) => setCategories(response.data))
+  //     .catch((error) => console.error("Error fetching categories:", error));
+  // }, []);
 
   return (
     <>

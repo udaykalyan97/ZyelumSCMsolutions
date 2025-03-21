@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-//import { partners } from "../Utils/Partners.js";
+import { partners } from "../Utils/Partners.js";
 import axios from "axios";
 
 const MainContentOurBrands = () => {
-  const [partners, setPartners] = useState([]);
+  // const [partners, setPartners] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("/api/partners")
-      .then((response) => setPartners(response.data))
-      .catch((error) => console.error("Error fetching partners:", error));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("/api/partners")
+  //     .then((response) => setPartners(response.data))
+  //     .catch((error) => console.error("Error fetching partners:", error));
+  // }, []);
 
   return (
     <>

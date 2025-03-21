@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
-// import { testimonials } from "../Utils/Testimonials.js";
+import { testimonials } from "../Utils/Testimonials.js";
 
 const MainContentTestimonials = () => {
-  const [testimonials, setTestimonials] = useState([]);
+  // const [testimonials, setTestimonials] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("/api/testimonials")
-      .then((response) => setTestimonials(response.data))
-      .catch((error) => console.error("Error fetching testimonials:", error));
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("/api/testimonials")
+  //     .then((response) => setTestimonials(response.data))
+  //     .catch((error) => console.error("Error fetching testimonials:", error));
+  // }, []);
 
   return (
     <>
