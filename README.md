@@ -116,3 +116,6 @@ This project is licensed under the **MIT License**.
 ## 🙌 Contributors
 - **Developer** - *Uday Kalyan*  
 - **Contributions Welcome!** Submit a PR or open an issue.  
+
+
+Please refer to WRITEUP.md for tech stack 
