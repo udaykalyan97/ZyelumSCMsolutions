@@ -25,7 +25,13 @@ npm start
 ```
 
 ---
+## 📌 How to Run Tests  
 
+```sh
+npm test
+```
+
+---
 ## 🛠️ Tech Stack
 
 ### **Frontend**

@@ -1,10 +1,21 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { categories } from "../Utils/Categories.js";
+// import { categories } from "../Utils/Categories.js";
+import axios from "axios";
 
 const MainContentCategories = () => {
-    return (
-        <>
-         <motion.section
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("/api/categories")
+      .then((response) => setCategories(response.data))
+      .catch((error) => console.error("Error fetching categories:", error));
+  }, []);
+
+  return (
+    <>
+      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
@@ -28,8 +39,8 @@ const MainContentCategories = () => {
           ))}
         </div>
       </motion.section>
-      </>
-    )
-}
+    </>
+  );
+};
 
 export default MainContentCategories;

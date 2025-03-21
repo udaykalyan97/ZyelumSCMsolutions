@@ -1,12 +1,21 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
 import { motion } from "framer-motion";
-import { testimonials } from "../Utils/Testimonials.js";
+// import { testimonials } from "../Utils/Testimonials.js";
 
 const MainContentTestimonials = () => {
+  const [testimonials, setTestimonials] = useState([]);
 
-    return (
-        <>
-        <section className="bg-gray-100 py-12 mt-8">
+  useEffect(() => {
+    axios
+      .get("/api/testimonials")
+      .then((response) => setTestimonials(response.data))
+      .catch((error) => console.error("Error fetching testimonials:", error));
+  }, []);
 
+  return (
+    <>
+      <section className="bg-gray-100 py-12 mt-8">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-gray-800">
             What Our Customers Say
@@ -44,8 +53,8 @@ const MainContentTestimonials = () => {
           </div>
         </div>
       </section>
-      </>
-    )
-}
+    </>
+  );
+};
 
 export default MainContentTestimonials;
