@@ -10,7 +10,7 @@ const Header = () => {
         <HeaderLogo />
         <div className="flex items-center gap-6">
           <HeaderNavigation />
-          <HeaderLoginButton />
+          <HeaderLoginButton />   
         </div>
       </div>
     </header>
