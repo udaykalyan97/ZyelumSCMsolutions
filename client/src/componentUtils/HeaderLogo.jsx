@@ -3,7 +3,7 @@ const HeaderLogo = () => {
         <>
         <a href="/" className="flex items-center">
           <img
-            src="../../public/businessLogo.png"
+            src="/businessLogo.png"
             alt="Logo"
             className="h-10"
           />
